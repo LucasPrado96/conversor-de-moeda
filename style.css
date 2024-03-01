@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Roboto, sans-serif;
+}
+
+body{
+    background-color: #8A51FC;
+}
+
+.giflogo{
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   
+}
+
+.label-selects{
+    background-color: #F4F4F4;
+    margin: 15px;
+    width: 30%;
+    padding: 1.5%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+select{
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    margin-top: 3px;
+}
+
+
+
+label{
+    font-size: 11px;
+    opacity: 0.9;
+    position: relative;
+    padding: 3px;
+}
+
+.inputvalor{
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 2px;
+   
+}
+
+.button-convert{
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    margin-top: 10%;
+    border: none;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    background-color: #772FD3;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button-convert:hover{
+    background-color: #451286;
+}
+
+.button-convert:active{
+    opacity: 0.6;
+}
+
+.img-currency{
+    width: 30px;
+}
+
+section{
+    background-color: #F4F4F4;
+    margin: 15px;
+    width: 30%;
+    padding: 1%;
+    border-radius: 8px;
+    display: flex;
+    margin-top: -8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+.seta{
+    transform: rotate(270deg);
+    width: 25px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.img-currency{
+    padding: 1px;
+    margin: 1px 50px;
+}
+
+.wraper-img-value{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option-currency{
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .label-selects{
+        width: 80%;
+        padding: 3%;
+    }
+
+    section{
+        width: 80%;
+        padding: 3%;
+    }
+}    

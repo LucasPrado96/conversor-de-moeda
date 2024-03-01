@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700">
+    <title>Document</title>
+</head>
+<body>
+    <img class="giflogo" src="./logo.gif">
+
+    <main>
+        <div class="label-selects">
+            <label>
+                Converter <b>de</b>
+                <select class="convert1">
+                    <option>BRL Real brasileiro</option>
+                </select>
+            </label>
+                
+
+            <label>
+                Converter <b>para</b>
+                <select class="option-convertido">
+                    <option value="dolar">USD Dólar americano</option>
+                    <option value="euro">EUR Euro</option>
+                    <option value="bitcoin">BTC Bitcoin</option>
+                    <option value="libra">GBP Libra esterlina</option>
+                </select>   
+            </label>
+                
+                <label>
+                    valor
+                    <input class="inputvalor" type="text" placeholder="Digite um valor para converter">
+                </label>
+            
+            <button class="button-convert">Converter</button>
+        </div><!---------label-selects-->  
+       
+        <section>
+            <div class="wraper-img-value">
+                <img class="img-currency" id="br-img" src="br.png">
+                <p>Real</p>
+                <p class="currency-valor" id="valorConverter">R$ 0,00</p>
+            </div>
+                <img class="seta" src="Vector.png">
+            <div class="wraper-img-value">
+                <img class="img-currency" src="us.png" id="us-img">
+                <p id="name-currency">Dolar</p>
+                <p class="currency-valor" id="valorConvertido">R$ 0,00</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -22,12 +22,11 @@ async function converter(){
     const bitcoinToday = parseFloat(data.BTCBRL.high);
     const realToday = 1;
     
-    valueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', {
-        style: 'currency', 
-        currency: 'BRL'
-       }).format(inputValor)
+    const fromCurrency = toConvert.value;
+    const toCurrency = convertOption.value;
 
-       const rates = {
+
+    const rates = {
         'real': realToday,
         'dolar': dolarToday,
         'euro': euroToday,
@@ -35,50 +34,26 @@ async function converter(){
         'bitcoin': bitcoinToday
     };
 
-    const fromCurrency = toConvert.value;
-    const toCurrency = convertOption.value;
+
+    valueToConvert.innerHTML = new Intl.NumberFormat('pt-BR', {
+        style: 'currency', 
+        currency: fromCurrency === 'real' ? 'BRL' : fromCurrency === 'dolar' ? 'USD' : fromCurrency === 'libra' ? 'GBP' : fromCurrency === 'euro' ? 'EUR' : 'BTC'
+       }).format(inputValor)
+
+    
+   
 
     if(fromCurrency !== toCurrency){
         const convertedValue = inputValor * (rates [fromCurrency] / rates[toCurrency]);
 
         valueConverted.innerHTML = new Intl.NumberFormat('pt-BR', {
             style: 'currency',
-            currency: toCurrency === 'real' ? 'BRL' : toCurrency === 'dolar' ? 'USD' : toCurrency === 'libra' ? 'GBP' : 'BTC'
+            currency: toCurrency === 'real' ? 'BRL' : toCurrency === 'dolar' ? 'USD' : toCurrency === 'libra' ? 'GBP' : toCurrency === 'euro' ? 'EUR' : 'BTC'
         }).format(convertedValue);
     } 
 
 
 
-    // if(convertOption.value == 'dolar'){
-    //     valueConverted.innerHTML = new Intl.NumberFormat('en-US', {
-    //         style: 'currency',
-    //         currency: 'USD'
-    //        }).format(inputValor / dolarToday);
-    // }
-
-    // if(convertOption.value == 'euro'){
-    //     valueConverted.innerHTML = new Intl.NumberFormat('de-DE', {
-    //         style: 'currency',
-    //         currency: 'EUR'
-    //        }).format(inputValor / euroToday);
-    // }
-
-    // if(convertOption.value == 'bitcoin'){
-    //     valueConverted.innerHTML = new Intl.NumberFormat('en-US', {
-    //         style: 'currency',
-    //         currency: 'BTC'
-    //     }).format(inputValor/bitcoinToday);
-    // }
-
-    // if(convertOption.value == 'libra'){
-    //     valueConverted.innerHTML = new Intl.NumberFormat('en-GB',{
-    //         style: 'currency',
-    //         currency: 'GBP'
-    //     }).format(inputValor/libraToday);
-    // }
-
-    
-    
 
 }
 
